@@ -1,3 +1,13 @@
+//Loading gif
+window.onload = function(){
+  document.getElementById('col-md-8').style.display = "none";
+  setTimeout(function() {
+    document.getElementById('loader').style.display = "none";
+    document.getElementById('col-md-8').style.display = "block"
+  }, 1200);
+}
+
+//Botão Menu
 function myFunction(y) {
     var x = document.getElementById("col-md-4");
     if (x.style.display === "block") {
@@ -30,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 
-////Carrossel
+//Carrossel
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -60,3 +70,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+

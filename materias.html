@@ -32,7 +32,7 @@
 				</div>
 				<div id="home">
 					<a href="index.html">
-						<img border="0" alt="Home" src="noun_Home_1935365.png" width="40" height="40">
+						<img border="0" alt="Home" src="noun_Home_1935365.png" width="35" height="35">
 					</a>
 				</div>			
 			</div>	
@@ -42,7 +42,7 @@
 			<div id="col-md-4">
 				<div class= "row">
 					<h3>Programação</h3>
-					<div class="texto">
+					<div class="hidden">
 						<p><a href="materias.html?category=Programacao&projeto=dsoft">Projeto Final de Design de Software</a></p>
 						<p><a href="materias.html?category=Programacao&projeto=codes">Projeto Final de Co-Design de Aplicativos</a></p>
 						<p><a href="materias.html?category=Programacao&projeto=cdados">Projeto Final de Ciência dos Dados</a></p>
@@ -50,7 +50,7 @@
 				</div>
 				<div class="row">
 					<h3>Matemática</h3>
-					<div class="texto">
+					<div class="hidden">
 						<p><a href="materias.html?category=Matemática&projeto=modsim">Projeto Final de Modelagem e Simulação</a></p>
 						<p><a href="materias.html?category=Matemática&projeto=matmult">Projeto Final de Matemática Multivariada</a></p>
 						<p><a href="materias.html?category=Matemática&projeto=matvar">Projeto Final de Matemática da Variação</a></p>
@@ -58,7 +58,7 @@
 				</div>
 				<div class="row">
 					<h3>Eletrônica</h3>
-					<div class="texto">
+					<div class="hidden">
 						<p><a href="materias.html?category=Eletrônica&projeto=acionas">Projeto Final de Acionamentos Elétricos</a></p>
 						<p><a href="materias.html?category=Eletrônica&projeto=modcont">Projeto Final de Modelagem e Controle</a></p>
 						<p><a href="materias.html?category=Eletrônica&projeto=instrumed">Estação Metereológica</a></p>
@@ -66,7 +66,7 @@
 				</div>
 				<div class="row">
 					<h3>Pensamento Crítico & Negócios</h3>
-					<div class="texto">
+					<div class="hidden">
 						<p><a href="materias.html?category=Pensamento+Crítico+e+Negócios&projeto=gde">Cases de Grandes Desafios da Engenharia</a></p>
 						<p><a href="materias.html?category=Pensamento+Crítico+e+Negócios&projeto=inovaincremental">Inovação Incremental para Empresa Existente</a></p>
 						<p><a href="materias.html?category=Pensamento+Crítico+e+Negócios&projeto=modelodenego">Modelo de Negócio para Startup Nova </a></p>
@@ -74,7 +74,7 @@
 				</div>
 				<div class="row">
 					<h3>Mecânica</h3>
-					<div class="texto">
+					<div class="hidden">
 						<p><a href="materias.html?category=Mecânica&projeto=natdes">Girafa do Job Rotation</a></p>
 						<p><a href="materias.html?category=Mecânica&projeto=natdes1">Melhoria para Carroças de Catadores</a></p>
 						<p><a href="materias.html?category=Mecânica&projeto=desconstruindo">Projeto Final de Desconstruindo a Matéria</a></p>
@@ -82,21 +82,16 @@
 				</div>
 			</div>
 
+			<div id="loader" style="text-align:center"></div>
 			<div id="col-md-8">
 				<!-- <div class="subtopico"> -->
-					<h4>{{name}}</h4>
+					<h4 id='subtitulo'>{{name}}</h4>
 					<div class='texto'>
 						<ul>
 							{{#each items as |items index|}}
-								<li class='topico'>{{index}}: <p class='texto'>{{items}}</p></li>
-								<!--
-								<ul>
-									{{#each texto as |texto index|}}
-										<li class='texto'>{{index}}: {{texto}}</li>
-									{{/each}}
-								</ul> 
-								-->
+								<li class='topico'>{{index}}: <p class='texto'>{{items}}<pre> </pre></p></li>
 							{{/each}}
+							<img src="{{imagem}}">
 						</ul>
 					</div>
 			</div>
